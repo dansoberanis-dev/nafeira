@@ -1,0 +1,134 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Luckiest Guy", cursive;
+  --font-logo: "Fredoka", sans-serif;
+  --font-body: "Nunito", sans-serif;
+
+  --color-feira-yellow: #f9b000;
+  --color-feira-gold: #f6c518;
+  --color-feira-orange: #f05a22;
+  --color-feira-red: #e52521;
+  --color-feira-blue: #1f6fd6;
+  --color-feira-cream: #fbf3e2;
+  --color-feira-ink: #2a1a10;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: #fbf3e2;
+  color: #2a1a10;
+  overflow-x: hidden;
+}
+
+/* ===== Marquee (agenda auto-scroll) ===== */
+@keyframes feira-marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: feira-marquee 42s linear infinite;
+}
+.marquee-pause:hover .animate-marquee {
+  animation-play-state: paused;
+}
+
+/* ===== Reviews marquee (reverse) ===== */
+@keyframes feira-marquee-rev {
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
+}
+.animate-marquee-rev {
+  animation: feira-marquee-rev 50s linear infinite;
+}
+
+/* ===== Floating / bob ===== */
+@keyframes feira-bob {
+  0%, 100% { transform: translateY(0) rotate(-1deg); }
+  50% { transform: translateY(-14px) rotate(1deg); }
+}
+.animate-bob { animation: feira-bob 5s ease-in-out infinite; }
+
+/* ===== Slow spin (sunburst) ===== */
+@keyframes feira-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.animate-spin-slow { animation: feira-spin 40s linear infinite; }
+.animate-spin-slower { animation: feira-spin 70s linear infinite reverse; }
+
+/* ===== Swinging string light ===== */
+@keyframes feira-sway {
+  0%, 100% { transform: rotate(-3deg); }
+  50% { transform: rotate(3deg); }
+}
+.animate-sway { animation: feira-sway 4s ease-in-out infinite; transform-origin: top center; }
+
+/* ===== Reveal on scroll ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.7s cubic-bezier(.2,.7,.2,1), transform 0.7s cubic-bezier(.2,.7,.2,1);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== Torn paper edge ===== */
+.torn-top {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='40' viewBox='0 0 1200 40' preserveAspectRatio='none'%3E%3Cpath d='M0 40 L0 18 Q 30 6 60 16 T 120 14 T 180 20 T 240 10 T 300 18 T 360 8 T 420 16 T 480 10 T 540 20 T 600 8 T 660 18 T 720 10 T 780 16 T 840 8 T 900 18 T 960 10 T 1020 18 T 1080 10 T 1140 16 T 1200 12 L1200 40 Z' fill='black'/%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='40' viewBox='0 0 1200 40' preserveAspectRatio='none'%3E%3Cpath d='M0 40 L0 18 Q 30 6 60 16 T 120 14 T 180 20 T 240 10 T 300 18 T 360 8 T 420 16 T 480 10 T 540 20 T 600 8 T 660 18 T 720 10 T 780 16 T 840 8 T 900 18 T 960 10 T 1020 18 T 1080 10 T 1140 16 T 1200 12 L1200 40 Z' fill='black'/%3E%3C/svg%3E");
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+
+/* ===== Agenda carousel: progress bar (3s per card) ===== */
+@keyframes feira-progress {
+  from { width: 0%; }
+  to { width: 100%; }
+}
+.animate-progress {
+  animation: feira-progress 3s linear forwards;
+}
+
+/* ===== Hero logo: zoom-in ao carregar a página ===== */
+@keyframes feira-zoom-in {
+  from { transform: scale(0.15); opacity: 0; }
+  55% { opacity: 1; }
+  to { transform: scale(1); opacity: 1; }
+}
+.animate-zoom-in {
+  animation: feira-zoom-in 1s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* ===== Borda amarela fina (estilo adesivo) ao redor da logo ===== */
+.logo-sticker {
+  filter:
+    drop-shadow(0 2px 0 #f9b000)
+    drop-shadow(0 -2px 0 #f9b000)
+    drop-shadow(2px 0 0 #f9b000)
+    drop-shadow(-2px 0 0 #f9b000)
+    drop-shadow(1px 1px 0 #f9b000)
+    drop-shadow(-1px 1px 0 #f9b000)
+    drop-shadow(1px -1px 0 #f9b000)
+    drop-shadow(-1px -1px 0 #f9b000)
+    drop-shadow(0 10px 14px rgba(42, 26, 16, 0.35));
+}
+
+
+::selection {
+  background: #f05a22;
+  color: #fbf3e2;
+}
+
+::-webkit-scrollbar { width: 12px; }
+::-webkit-scrollbar-track { background: #fbf3e2; }
+::-webkit-scrollbar-thumb { background: #f05a22; border-radius: 999px; border: 3px solid #fbf3e2; }
