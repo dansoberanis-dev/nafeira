@@ -313,6 +313,13 @@ npm run build    # produção → dist/index.html único (self-contained)
   `pb-40/sm:pb-44` para nada ficar coberto (verificado em screenshots desktop 1280px e mobile 390px);
 - Cardápio: legenda da foto trocada de "Pastel saído da chapa" para **"Pastel frito na hora"**.
 
+**SEO / compartilhamento (09/10/2026):**
+- Projeto renomeado na Vercel: URL oficial = **https://nafeirabar.vercel.app**;
+- Open Graph completo no `index.html` (og:title/description/image 1200×630/URL/pt_BR + Twitter Card
+  `summary_large_image`): ao mandar o link no WhatsApp, aparece um **print do hero** (logo + tagline +
+  fundo) — imagem gerada por screenshot real em `public/images/og-image.jpg`;
+- Favicon `public/icon.png` (256×256, recorte quadrado da logo oficial) + apple-touch-icon.
+
 **Ajustes mobile (09/10/2026):**
 - Hero: "Pastel, cerveja / & muito samba" quebra em 2 linhas só no mobile (`<br className="sm:hidden">`);
 - Título do O Bar: "O bar mais feira / da cidade" idem;
