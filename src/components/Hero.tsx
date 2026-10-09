@@ -48,7 +48,8 @@ export default function Hero() {
         className="mt-5 text-2xl text-feira-cream drop-shadow-[0_3px_0_rgba(42,26,16,0.45)] sm:text-4xl"
         style={{ fontFamily: "Luckiest Guy, cursive" }}
       >
-        Pastel, cerveja <span className="text-feira-gold">&amp;</span> muito samba
+        Pastel, cerveja
+        <br className="sm:hidden" /> <span className="text-feira-gold">&amp;</span> muito samba
       </h1>
 
         <p className="mx-auto mt-6 max-w-xl text-base font-semibold text-feira-cream/90 sm:text-lg">

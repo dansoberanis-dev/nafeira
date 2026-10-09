@@ -48,12 +48,12 @@ export default function Footer() {
                 </div>
               </div>
 
-              <div className="mt-6 flex flex-wrap gap-3">
+              <div className="mt-6 flex gap-3">
                 <a
                   href="https://instagram.com/nafeira.bar"
                   target="_blank"
                   rel="noreferrer"
-                  className="rounded-full bg-feira-ink px-6 py-3.5 text-sm font-extrabold uppercase tracking-wide text-feira-cream transition hover:scale-105"
+                  className="flex-1 rounded-full bg-feira-ink px-4 py-3.5 text-center text-xs font-extrabold uppercase tracking-wide text-feira-cream transition hover:scale-105 sm:flex-none sm:px-6 sm:text-sm"
                 >
                   📸 @nafeira.bar
                 </a>
@@ -61,7 +61,7 @@ export default function Footer() {
                   href="https://www.google.com/maps/search/?api=1&query=Na+Feira+Bar+Alameda+Princesa+Izabel+465+Curitiba"
                   target="_blank"
                   rel="noreferrer"
-                  className="rounded-full bg-feira-cream px-6 py-3.5 text-sm font-extrabold uppercase tracking-wide text-feira-orange transition hover:scale-105"
+                  className="flex-1 rounded-full bg-feira-cream px-4 py-3.5 text-center text-xs font-extrabold uppercase tracking-wide text-feira-orange transition hover:scale-105 sm:flex-none sm:px-6 sm:text-sm"
                 >
                   🗺️ Como chegar
                 </a>

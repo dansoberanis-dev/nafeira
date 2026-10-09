@@ -71,7 +71,7 @@ const photos: Photo[] = [
     alt: "Fachada do Na Feira Bar lotada na entrada, à noite",
     label: "Entrada",
     caption: "A Feira começa aqui",
-    imgClassName: "h-64 lg:h-full",
+    imgClassName: "h-64 lg:h-full [object-position:50%_30%]",
   },
 ];
 
@@ -86,7 +86,8 @@ export default function About() {
             className="text-4xl text-feira-red sm:text-6xl"
             style={{ fontFamily: "Luckiest Guy, cursive" }}
           >
-            O bar mais <span className="text-feira-orange">feira</span> da cidade
+            O bar mais <span className="text-feira-orange">feira</span>
+            <br className="sm:hidden" /> da cidade
           </h2>
           <p className="mt-5 text-lg font-semibold text-feira-ink/80">
             No Na Feira você entra num ambiente seguro, com muita gente bonita, muito samba, pastel

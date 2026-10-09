@@ -313,6 +313,13 @@ npm run build    # produção → dist/index.html único (self-contained)
   `pb-40/sm:pb-44` para nada ficar coberto (verificado em screenshots desktop 1280px e mobile 390px);
 - Cardápio: legenda da foto trocada de "Pastel saído da chapa" para **"Pastel frito na hora"**.
 
+**Ajustes mobile (09/10/2026):**
+- Hero: "Pastel, cerveja / & muito samba" quebra em 2 linhas só no mobile (`<br className="sm:hidden">`);
+- Título do O Bar: "O bar mais feira / da cidade" idem;
+- Mosaico: foto da Entrada com `object-position: 50% 30%` (foco no prédio/entrada, não na multidão);
+- Footer: botões "@nafeira.bar" e "Como chegar" agora ficam lado a lado no mobile (`flex-1`, texto xs),
+  voltando ao tamanho normal (`sm:flex-none sm:text-sm`) no desktop.
+
 **Hero atualizado (09/10/2026):**
 - Fundo substituído pela nova foto (heronafeiranovo.png, 1280×720, mesma cena do São Jorge com o
   teto de panos; otimizada ~256 KB); `objectPosition: 50% 50%`.
